@@ -3,7 +3,6 @@
 O Agora ou Nunca é o cantinho na internet de uma jovem de 80 anos (minha querida avó) que decidiu que já está na hora de mostrar sua escrita para o mundo em um lugar que seja mais a "sua cara". 
 Depois de passar décadas escrevendo no anonimato como ghostwriter, a escritora agora se apresenta!
 
-
 Uma jovem senhora nada convencional que:
 
 Pega a estrada sem rumo só pelo prazer da aventura e da vida;
