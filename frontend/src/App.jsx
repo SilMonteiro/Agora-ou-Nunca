@@ -46,7 +46,6 @@ function App() {
 
       <main>
         <section id="hero" className="hero">
-          <p className="eyebrow">Com carinho para minha, vó! </p>
           <h1 className="hero-titulo">
             Agora ou Nunca
           </h1>
@@ -92,6 +91,8 @@ function App() {
       </main>
       <footer className="rodape">
         <p>Agora ou Nunca · Nunca é tarde!</p>
+        <br></br>
+        <p className="eyebrow">Com carinho para você, vó! </p>
       </footer>
     </>
   )

@@ -41,9 +41,9 @@
 
 
 .hero {
-  max-width: 680px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 88px 24px 80px;
+  padding: 80px 24px 40px;
   text-align: center;
 }
 
@@ -73,12 +73,12 @@
 
 .hero-titulo {
   font-family: var(--font-heading);
-  font-size: clamp(62px, 11vw, 104px);
+  font-size: clamp(48px, 9vw, 104px);
   font-weight: 700;
   font-style: italic;
-  letter-spacing: -2px;
-  line-height: 0.95;
-  margin-bottom: 32px;
+  line-height: 1.1;
+  padding-bottom: 0.1em;
+  margin-bottom: 30px;
 
   background: linear-gradient(160deg, var(--accent) 10%, #7a2e18 80%);
   -webkit-background-clip: text;
