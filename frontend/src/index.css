@@ -1,21 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap');
 
 :root {
-  /* ——— Paleta Terracota ——— */
-  --bg:            #f4ede0;   /* papel envelhecido */
-  --bg-card:       #faf5ec;   /* pergaminho claro */
-  --text:          #5c3d28;   /* marrom quente */
-  --text-strong:   #2e1a0e;   /* espresso profundo */
-  --accent:        #b85438;   /* terracota principal */
-  --accent-light:  #d4856a;   /* terracota suave */
+  --bg:            #f4ede0;
+  --bg-card:       #faf5ec;
+  --text:          #5c3d28;
+  --text-strong:   #2e1a0e;
+  --accent:        #b85438;
+  --accent-light:  #d4856a;
   --accent-soft:   rgba(184, 84, 56, 0.1);
   --accent-border: rgba(184, 84, 56, 0.28);
-  --gold:          #b8892a;   /* ouro vintage */
+  --gold:          #b8892a;
   --gold-soft:     rgba(184, 137, 42, 0.15);
-  --border:        #d9c5a8;   /* bege envelhecido */
+  --border:        #d9c5a8; 
   --shadow:        0 4px 28px rgba(46, 26, 14, 0.12);
 
-  /* ——— Tipografia ——— */
+
   --font-body:    'Lora', Georgia, serif;
   --font-heading: 'Playfair Display', Georgia, serif;
 

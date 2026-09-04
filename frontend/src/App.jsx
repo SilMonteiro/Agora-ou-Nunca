@@ -52,7 +52,7 @@ function App() {
           <p className="hero-subtitulo">
             Relatos sinceros, levemente debochados e sem filtro sobre liberdade,
             amadurecimento, viagens, livros e as dores e delícias do cotidiano.
-          </p>
+              </p>
           <p className="hero-assinatura">— Nunca é tarde! —</p>
         </section>
         <section id="sobre" className="sobre">
