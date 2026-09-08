@@ -89,14 +89,18 @@
   font-weight: 700;
   color: var(--bg);
   line-height: 0.9;
-  margin-bottom: 24px;
+  margin: 10px 0 40px
 }
 
 .hero-subtitulo {
   font-family: var(--font-cursive);
-  font-size: clamp(24px, 4vw, 36px);
-  color: #ead177;
-  margin-bottom: 50px;
+  font-size: clamp(20px, 5vw, 30px);
+  color: #fae9ad;
+  margin: 60px 0 40px;
+}
+
+.hero-assinatura {
+  color: #faf8f1;
 }
 
 .btn-vintage {
@@ -208,6 +212,137 @@
 
 .post-link:hover {
   color: var(--text-strong);
+}
+
+.historias {
+  padding: 84px 24px 96px;
+  background: rgba(250, 245, 236, 0.58);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 72px;
+}
+
+.historias-cabecalho {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.historias-cabecalho .eyebrow {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.historias-cabecalho .eyebrow::before,
+.historias-cabecalho .eyebrow::after {
+  background: var(--accent);
+}
+
+.filtros-publicacoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 34px auto 42px;
+}
+
+.filtro-publicacao {
+  padding: 8px 16px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filtro-publicacao:hover,
+.filtro-publicacao-ativo {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.publicacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.publicacao {
+  min-height: 300px;
+  padding: 28px 30px 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--accent-light);
+  box-shadow: 2px 4px 15px rgba(46, 26, 14, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.publicacao:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.publicacao-resenha {
+  border-top-color: var(--gold);
+}
+
+.publicacao-carta {
+  border-top-color: #7f9a77;
+}
+
+.publicacao-outros {
+  border-top-color: #8b718e;
+}
+
+.publicacao-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.publicacao-icone {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--accent-border);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 21px;
+}
+
+.publicacao-tipo {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.publicacao-data {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+  font-family: var(--font-cursive);
+  font-size: 20px;
+}
+
+.publicacao h3 {
+  margin-bottom: 12px;
+  font-size: 25px;
+}
+
+.publicacao p {
+  margin-bottom: 22px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .sobre {
@@ -370,6 +505,14 @@
   }
 
   .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .historias {
+    padding: 64px 20px 72px;
+  }
+
+  .publicacoes-grid {
     grid-template-columns: 1fr;
   }
 
