@@ -60,7 +60,7 @@
 }
 
 .eyebrow {
-  font-size: 12px;
+  font-size: 18px;
   font-family: var(--font-body);
   font-weight: 400;
   letter-spacing: 2.5px;
@@ -101,6 +101,10 @@
 
 .hero-assinatura {
   color: #faf8f1;
+}
+
+.hero-assinatura-footer{
+  font-size: 16px;
 }
 
 .btn-vintage {
@@ -349,6 +353,10 @@
   padding: 50px 24px 72px;
 }
 
+.sobre.sobre{
+  background: var(--text);
+}
+
 .sobre-caixa {
   max-width: 600px;
   margin: 0 auto;
@@ -389,7 +397,7 @@
 .secao-titulo {
   font-size: 26px;
   text-align: center;
-  margin-bottom: 36px;
+  margin: 50px 0 30px;
   color: var(--text-strong);
 
   display: flex;
@@ -456,7 +464,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  max-width: 580px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -467,7 +475,7 @@
   border: 1px solid var(--accent-border);
   border-radius: 10px; 
   color: var(--accent);
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 0.5px;
   transition: background 0.2s, color 0.2s;
 }

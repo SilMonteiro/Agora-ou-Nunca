@@ -173,7 +173,7 @@ function App() {
         </section>
       </main>
       <footer className="rodape">
-        <p>Agora ou Nunca · Nunca é tarde!</p>
+        <p className="hero-assinatura-footer">Agora ou Nunca · Nunca é tarde!</p>
         <br></br>
         <p className="eyebrow">Com carinho para você, vó! </p>
       </footer>
