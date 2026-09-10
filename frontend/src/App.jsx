@@ -5,12 +5,12 @@ const caracteristicas = [
   {
     icone: '🛣️',
     titulo: 'É andarilha',
-    descricao: 'Pega a estrada sem rumo e conhece lugares improváveis. E tudo só pelo prazer da aventura.',
+    descricao: 'Pega a estrada sem rumo e conhece lugares improváveis. E tudo só pelo prazer da aventura. "Viajar?" "Para onde?" "Não sei" "Então vamos!"',
   },
   {
     icone: '🏋️',
     titulo: 'Mutio determinada',
-    descricao: 'Não troca o treino de musculação por absolutamente nada. Tem uma agenda cheia, então se quiser um tempo, agende com antecedência!',
+    descricao: 'Não troca o treino de musculação por absolutamente nada. Está cursando sua faculdade de jornalismo. Tem uma agenda cheia, então se quiser um tempo, agende com antecedência!',
   },
   {
     icone: '📚',
