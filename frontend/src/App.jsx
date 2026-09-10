@@ -106,7 +106,7 @@ function App() {
         <nav className="nav">
           <a href="#">Início</a>
           <a href="#historias">Histórias</a>
-          <a href="#">Sobre</a>
+          <a href="#sobre">Sobre</a>
         </nav>
       </header>
 
@@ -151,7 +151,7 @@ function App() {
         ) : (
           <section id="historias" className="historias">
             <div className="historias-cabecalho">
-              <p className="eyebrow">Caderno da Silvia Lúcia</p>
+              <p className="eyebrow">Sinta-se em casa</p>
               <h2 className="secao-titulo-vintage">Histórias para guardar</h2>
               <p className="secao-subtitulo-cursive">
                 Crônicas, cartas, resenhas e outras coisas que pedem para ser escritas.
