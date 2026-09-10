@@ -96,7 +96,11 @@
   font-family: var(--font-cursive);
   font-size: clamp(20px, 5vw, 30px);
   color: #fae9ad;
-  margin: 60px 0 40px;
+  margin: 60px 10px 20px 40px;
+  background: rgba(250, 233, 173, 0.1);
+  padding: 10px 24px 15px 10px;
+  border-radius: 50px
+
 }
 
 .hero-assinatura {
