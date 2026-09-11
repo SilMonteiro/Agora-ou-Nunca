@@ -95,15 +95,33 @@ const publicacoes = [
       'Por isso vale guardar as coisas pequenas: elas são as partes mais sinceras da história de cada pessoa.',
     ],
   },
+  
 ]
 
 function App() {
+  const [paginaAtual, setPaginaAtual] = useState('inicio')
   const [tipoSelecionado, setTipoSelecionado] = useState('Todas')
   const [publicacaoSelecionada, setPublicacaoSelecionada] = useState(null)
 
   const publicacoesVisiveis = tipoSelecionado === 'Todas'
     ? publicacoes
     : publicacoes.filter((publicacao) => publicacao.tipo === tipoSelecionado)
+
+  const publicacoesDaPagina = paginaAtual === 'publicacoes'
+    ? publicacoesVisiveis
+    : publicacoesVisiveis.slice(0, 2)
+
+  const abrirPublicacoes = () => {
+    setPaginaAtual('publicacoes')
+    setPublicacaoSelecionada(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const voltarParaInicio = () => {
+    setPaginaAtual('inicio')
+    setPublicacaoSelecionada(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const publicacaoAtual = publicacoes.find((publicacao) => publicacao.titulo === publicacaoSelecionada?.titulo) ?? null
 
@@ -112,13 +130,14 @@ function App() {
       <header className="cabecalho">
         <span className="logo">Escrito por Silvia Lúcia</span>
         <nav className="nav">
-          <a href="#">Início</a>
-          <a href="#historias">Histórias</a>
+          <a href="#hero" onClick={voltarParaInicio}>Início</a>
+          <a href="#historias" onClick={abrirPublicacoes}>Histórias</a>
           <a href="#sobre">Sobre</a>
         </nav>
       </header>
 
       <main>
+        {paginaAtual === 'inicio' && !publicacaoAtual && (
         <section id="hero" className="hero">
           <h1 className="hero-titulo">
             Agora ou Nunca
@@ -129,6 +148,7 @@ function App() {
           </p>
           <p className="hero-assinatura">— Nunca é tarde! —</p>
         </section>
+        )}
 
         {publicacaoAtual ? (
           <section id="historias" className="historias">
@@ -160,11 +180,21 @@ function App() {
           <section id="historias" className="historias">
             <div className="historias-cabecalho">
               <p className="eyebrow">Sinta-se em casa</p>
-              <h2 className="secao-titulo-vintage">Histórias para guardar</h2>
+              <h2 className="secao-titulo-vintage">
+                {paginaAtual === 'publicacoes' ? 'Todas as publicações' : 'Histórias para guardar'}
+              </h2>
               <p className="secao-subtitulo-cursive">
-                Crônicas, cartas, resenhas e outras coisas que pedem para ser escritas.
+                {paginaAtual === 'publicacoes'
+                  ? 'Leia tudo o que já foi publicado por aqui.'
+                  : 'Crônicas, cartas, resenhas e outras coisas que pedem para ser escritas.'}
               </p>
             </div>
+
+            {paginaAtual === 'publicacoes' && (
+              <button type="button" className="botao-voltar botao-voltar-lista" onClick={voltarParaInicio}>
+                ← Voltar para o início
+              </button>
+            )}
 
             <div className="filtros-publicacoes" aria-label="Filtrar publicações por tipo">
               {tiposPublicacao.map((tipo) => (
@@ -181,7 +211,7 @@ function App() {
             </div>
 
             <div className="publicacoes-grid">
-              {publicacoesVisiveis.map((publicacao) => (
+              {publicacoesDaPagina.map((publicacao) => (
                 <article key={publicacao.titulo} className={`publicacao publicacao-${publicacao.classe}`}>
                   <div className="publicacao-topo">
                     <span className="publicacao-icone" aria-hidden="true">{publicacao.icone}</span>
@@ -200,9 +230,20 @@ function App() {
                 </article>
               ))}
             </div>
+
+            {paginaAtual === 'inicio' && publicacoes.length > 2 && (
+              <button
+                type="button"
+                className="botao-todas-publicacoes"
+                onClick={abrirPublicacoes}
+                aria-label="Ver todas as publicações"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            )}
           </section>
         )}
-        <section id="sobre" className="sobre">
+        {paginaAtual === 'inicio' && !publicacaoAtual && <section id="sobre" className="sobre">
           <div className="sobre-caixa">
             <h2>Quem é Silvia Lúcia?</h2>
             <p>
@@ -212,8 +253,8 @@ function App() {
               que seja "mais a sua cara."
             </p>
           </div>
-        </section>
-        <section id="ela" className="ela">
+        </section>}
+        {paginaAtual === 'inicio' && !publicacaoAtual && <section id="ela" className="ela">
           <h2 className="secao-titulo">Quatro coisas sobre Dona Silu</h2>
           <div className="cards-grid">
             {caracteristicas.map((item) => (
@@ -224,8 +265,8 @@ function App() {
               </div>
             ))}
           </div>
-        </section>
-        <section id="temas" className="temas">
+        </section>}
+        {paginaAtual === 'inicio' && !publicacaoAtual && <section id="temas" className="temas">
           <h2 className="secao-titulo">O que você vai encontrar aqui?</h2>
           <div className="categorias">
             {categorias.map((categoria) => (
@@ -234,7 +275,7 @@ function App() {
               </span>
             ))}
           </div>
-        </section>
+        </section>}
       </main>
       <footer className="rodape">
         <p className="hero-assinatura-footer">Agora ou Nunca · Nunca é tarde!</p>

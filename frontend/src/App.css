@@ -246,6 +246,11 @@
   font: inherit;
 }
 
+.botao-voltar-lista {
+  display: block;
+  margin: 0 auto 30px;
+}
+
 .publicacao-detalhe-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -321,6 +326,29 @@
   gap: 24px;
   max-width: 940px;
   margin: 0 auto;
+}
+
+.botao-todas-publicacoes {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin: 34px auto 0;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--accent);
+  font-family: var(--font-heading);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.botao-todas-publicacoes:hover {
+  background: var(--accent);
+  color: var(--bg);
+  transform: translateX(4px);
 }
 
 .publicacao {
