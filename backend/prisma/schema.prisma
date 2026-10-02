@@ -1,0 +1,39 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Usuario {
+  id            String       @id @default(uuid())
+  nome          String
+  email         String       @unique
+  senha_hash    String
+  criado_em     DateTime     @default(now())
+  atualizado_em DateTime     @updatedAt
+
+  publicacoes   Publicacao[]
+
+  @@map("usuarios")
+}
+
+model Publicacao {
+  id            String    @id @default(uuid())
+  titulo        String
+  slug          String    @unique
+  resumo        String?
+  conteudo      String
+  tipo          String
+  imagem_url    String?
+  status        String    @default("rascunho")
+  publicado_em  DateTime?
+  criado_em     DateTime  @default(now())
+  atualizado_em DateTime  @updatedAt
+
+  autor_id      String
+  autor         Usuario   @relation(fields: [autor_id], references: [id], onDelete: Cascade)
+
+  @@map("publicacoes")
+}
